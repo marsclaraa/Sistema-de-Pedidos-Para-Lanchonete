@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',100)->nullable(false);
-            $table->text('ingredientes')->nullable(false);
-            $table->decimal('valor',15,2)->nullable(false);
-            $table->string('imagem_path')->nullable();
+            $table->string('nome')->nullable(false); 
+            $table->text('ingredientes')->nullable(false); 
+            $table->decimal('valor',15,2)->nullable(false); 
+            $table->string('imagem_path')->nullable(); 
             $table->timestamps();
         });
     }

@@ -16,12 +16,12 @@ class Create extends Component
         public $password;
     
         protected $rules = [
-            'nome' => 'required|max:100',
-            'endereco' => 'required|max:200',
+            'nome' => 'required|max:255',
+            'endereco' => 'required|max:255',
             'telefone' => 'required|max:15',
             'cpf' => 'required|max:14',
             'password' => 'required|min:6',
-            'email' => 'required|email|unique:cliente|max:150'
+            'email' => 'required|email|unique:clientes|max:255'
     
         ];
     
@@ -30,7 +30,7 @@ class Create extends Component
             'nome.max' => 'O limite maxímo de caracteres foi atingido',
             'email.required' => 'O e-mail é obrigatório',
             'email.email' => 'Formato de e-mail inválido',
-            'email.unique' => 'Este endereço de email já está cadastrado',
+            'cpf.unique' => 'Este CPF já está cadastrado',
             'email.max' => 'O limite maxímo de caracteres foi atingido',
             'cpf.required' => 'O campo CPF é obrigatório',
             'cpf.max' => 'O limite maxímo de caracteres foi atingido',
@@ -44,12 +44,6 @@ class Create extends Component
         ];
     
     
-        public function render()
-    
-        {
-            return view('livewire.create');
-        }
-    
         public function store()
         {
             $this->validate();
@@ -61,10 +55,20 @@ class Create extends Component
                 'cpf' => $this->cpf,
                 'email' => $this->email,
                 'password' => Hash::make($this->password),
-    
             ]);
     
-            session()->flash('success', 'Cadastro Realizado');
-        }
+            session()->flash('success', 'Cadastro Realizado!');
+
+        // Limpar os campos após o cadastro
+        $this->reset(['nome', 'endereco', 'telefone', 'cpf','email','password']);
     }
+    
+    public function render()
+    
+    {
+        return view('livewire.create');
+    }
+           
+        }
+    
     

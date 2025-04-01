@@ -12,14 +12,10 @@ use Illuminate\Support\Facades\Hash;
 class ClienteSeeder extends Seeder
 
 {
-    /** 
-     * Run the database seeds. 
-     */
 
     public function run(): void
 
     {
-
         $nomes = collect(['João', 'Maria', 'José', 'Ana', 'Pedro', 'Sofia', 'Lucas', 'Isabela', 'Gabriel', 'Manuela']);
         $email = collect(['joao', 'maria', 'josé', 'ana', 'pedro', 'sofia', 'lucas', 'isabela', 'gabriel', 'manuela']);
         $ruas = collect(['Rua A', 'Rua B', 'Rua C', 'Rua D', 'Rua E']);

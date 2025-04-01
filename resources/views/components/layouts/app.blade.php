@@ -14,7 +14,7 @@
 </head>
 
 <body style="background-color: #FFFFFF"  style="bg-gradient">
-    <nav class="navbar navbar-expand-lg background-color: #2980b9">
+    <nav class="navbar navbar-expand-lg" style="#2980b9" >
         <div class="container-fluid">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,18 +26,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Vibe & Lanche</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Cadastre-se/a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Entre/a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Disabled</a>
@@ -45,7 +37,7 @@
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button class="btn btn-outline-success" type="submit">Pesquisar...</button>
             </form>
           </div>
         </div>
